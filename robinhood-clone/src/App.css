@@ -5,3 +5,17 @@
 body {
   background-color: black;
 }
+
+.app__body {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+}
+
+.app__container {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  padding: 0 48px;
+}
