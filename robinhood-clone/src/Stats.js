@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { db } from "./firebase";
 
 import "./Stats.css";
 import StatsRow from "./StatsRow";
@@ -9,6 +10,7 @@ const BASE_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
   const [stockData, setStockData] = useState([]);
+  const [myStocks, setMyStocks] = useState([]);
 
   const getStocksData = (stock) => {
     return axios
