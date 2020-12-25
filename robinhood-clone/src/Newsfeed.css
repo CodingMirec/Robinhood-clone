@@ -39,3 +39,14 @@
   width: 100%;
   margin-bottom: 8px;
 }
+
+.newsfeed__popularLists__section {
+  margin-top: 60px;
+}
+
+.newsfeed__popularLists__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
