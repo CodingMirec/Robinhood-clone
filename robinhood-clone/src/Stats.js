@@ -82,18 +82,18 @@ function Stats() {
         </div>
         <div className="stats__content">
           <div className="stats__rows">
-            {/* {myStocks.map((stock) => (
+            {myStocks.map((stock) => (
               <StatsRow
                 key={stock.data.ticker}
                 name={stock.data.ticker}
                 openPrice={stock.info.o}
-                volume={stock.data.share}
+                shares={stock.data.share}
                 price={stock.info.c}
               />
-            ))} */}
+            ))}
           </div>
         </div>
-        <div className="stats__header">
+        <div className="stats__header stats__lists">
           <p>Lists</p>
         </div>
         <div className="stats__content">
