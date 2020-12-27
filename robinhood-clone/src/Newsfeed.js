@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import Chip from "@material-ui/core/Chip";
-import { Avatar } from "@material-ui/core";
 
+import Chip from "./Chip";
 import LineGraph from "./LineGraph";
 import TimeLine from "./TimeLine";
 
 import "./Newsfeed.css";
 
 function Newsfeed() {
-  const popularTopics = [
+  const [popularTopics, setTopics] = useState([
     "Technology",
     "Top Movies",
     "Upcoming Earnings",
@@ -18,7 +17,7 @@ function Newsfeed() {
     "Index ETFs",
     "China",
     "Pharma",
-  ];
+  ]);
 
   return (
     <div className="newsfeed">
@@ -49,9 +48,12 @@ function Newsfeed() {
             <p>Show More</p>
           </div>
           <div className="newsfeed__popularLists__badges">
-            {/* {popularTopics.map((topic) => {
-              <Chip className="topic__badge" variant="outlined" label={topic} avatar={<Avatar src={`https://avatars.dicebear.com/api/`}}
-            })} */}
+            {popularTopics.map((topic) => (
+              <Chip
+                label={topic}
+                image={`https://avatars.dicebear.com/api/human/${topic}.svg`}
+              />
+            ))}
           </div>
         </div>
       </div>
