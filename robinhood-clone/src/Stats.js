@@ -87,7 +87,7 @@ function Stats() {
                 key={stock.data.ticker}
                 name={stock.data.ticker}
                 openPrice={stock.info.o}
-                shares={stock.data.share}
+                shares={stock.data.shares}
                 price={stock.info.c}
               />
             ))}
