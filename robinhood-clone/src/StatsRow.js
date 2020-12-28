@@ -41,7 +41,12 @@ function StatsRow(props) {
       </div>
       <div className="row__numbers">
         <p className="row__price">{props.price}</p>
-        <p className="row__percentage">{Number(percentage).toFixed(2)}%</p>
+        <p
+          className="row__percentage"
+          style={{ color: Number(percentage) < 0 ? "red" : "#5ac53b" }}
+        >
+          {Number(percentage).toFixed(2)}%
+        </p>
       </div>
     </div>
   );
